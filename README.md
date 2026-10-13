@@ -3,8 +3,8 @@
 * **Estudiante:** Miguel Ricardo Calderon Serpa
 * **Proyecto:** Sitio web para Taller Cor Leo (Taller de Motos)
 * **Páginas del sitio:** `index.html` y `contacto.html`
-* **Enlace a GitHub:** [Pega aquí el enlace de tu repositorio público]
-* **Enlace a GitHub Pages:** [Pega aquí el enlace de GitHub Pages]
+* **Enlace a GitHub:** [https://github.com/mcalderonserpa/SitioWeb-HTML_CSS-CampusLands](https://github.com/mcalderonserpa/SitioWeb-HTML_CSS-CampusLands)
+* **Enlace a GitHub Pages:** [https://mcalderonserpa.github.io/SitioWeb-HTML_CSS-CampusLands/](https://mcalderonserpa.github.io/SitioWeb-HTML_CSS-CampusLands/)
 
 ---
 
@@ -206,12 +206,5 @@ El sitio está adaptado para verse bien desde computadores hasta celulares de **
 
 ## 10. Capturas
 
-Guarda las capturas en la carpeta `capturas/` con estos nombres:
-
-* **Página principal en computador:** `![Inicio en PC](capturas/desktop-index.png)`
-* **Página principal en celular (360 px):** `![Inicio en Celular](capturas/mobile-360-index.png)`
-* **Página de tarifas en computador:** `![Tarifas en PC](capturas/desktop-contacto.png)`
-* **Página de tarifas en celular (360 px):** `![Tarifas en Celular](capturas/mobile-360-contacto.png)`
-* **Captura Conflicto 1 (Inspector):** `![Conflicto 1](capturas/conflicto1-inspector.png)`
-* **Captura Conflicto 2 (Inspector):** `![Conflicto 2](capturas/conflicto2-inspector.png)`
-* **Captura Conflicto 3 (Inspector):** `![Conflicto 3](capturas/conflicto3-inspector.png)`
+![captura pc](capturas/PC.png)
+![captura movil](capturas/movil.png)
