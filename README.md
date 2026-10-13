@@ -43,7 +43,7 @@ actividad1/
     └── Proyecto-Sitio-Negocio-Local.pdf
 ```
 
-### Justificación de las etiquetas semánticas
+### Etiquetas semánticas
 * `<header>`: Agrupar el logo, el título del negocio, el subtítulo y el menú de navegación.
 * `<nav>`: Barra de navegación con enlaces a las secciones y a la otra página.
 * `<main>`: Encerrar todo el contenido principal de cada página.
