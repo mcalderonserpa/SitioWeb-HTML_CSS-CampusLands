@@ -108,7 +108,6 @@ No se usó `!important`. Los conflictos se resolvieron usando especificidad y or
   1. `.tarjeta p` $\rightarrow$ Especificidad: **(0, 1, 1)** (1 clase, 1 etiqueta) $\rightarrow$ `color: #bbbbbb;`
   2. `.tarjeta--destacada .tarjeta__precio` $\rightarrow$ Especificidad: **(0, 2, 0)** (2 clases) $\rightarrow$ `color: var(--color-blanco);`
 * **Cuál gana y por qué:** Gana `.tarjeta--destacada .tarjeta__precio` porque tiene 2 clases contra 1 clase y 1 etiqueta. En el inspector se ve la regla `.tarjeta p` tachada.
-* **Captura:** `capturas/conflicto1-inspector.png`
 
 ### Conflicto 2: Color del enlace "Tarifas y Citas" en el menú
 * **Elemento:** El enlace `<a class="nav__enlace nav__enlace--destacado">`.
@@ -116,7 +115,6 @@ No se usó `!important`. Los conflictos se resolvieron usando especificidad y or
   1. `.nav__lista a` $\rightarrow$ Especificidad: **(0, 1, 1)** (1 clase, 1 etiqueta) $\rightarrow$ `color: #bbbbbb;`
   2. `.nav__lista .nav__enlace--destacado` $\rightarrow$ Especificidad: **(0, 2, 0)** (2 clases) $\rightarrow$ `color: var(--color-blanco);`
 * **Cuál gana y por qué:** Gana `.nav__lista .nav__enlace--destacado` con especificidad (0, 2, 0). La regla `.nav__lista a` pierde y aparece tachada.
-* **Captura:** `capturas/conflicto2-inspector.png`
 
 ### Conflicto 3: Empate resuelto por orden en el botón del formulario
 * **Elemento:** El botón `<button type="submit" class="boton boton--primario boton--formulario">`.
@@ -124,7 +122,6 @@ No se usó `!important`. Los conflictos se resolvieron usando especificidad y or
   1. `.boton--primario` (línea 216) $\rightarrow$ Especificidad: **(0, 1, 0)** $\rightarrow$ `padding: 0.6rem 1.2rem;`
   2. `.boton--formulario` (línea 390) $\rightarrow$ Especificidad: **(0, 1, 0)** $\rightarrow$ `padding: 0.85rem;`
 * **Cuál gana y por qué:** Como las dos reglas tienen exactamente la misma especificidad (0, 1, 0), hay un empate. Gana `.boton--formulario` porque está escrita más abajo en el archivo CSS.
-* **Captura:** `capturas/conflicto3-inspector.png`
 
 ---
 
