@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sitio web de Taller Cor Leo. Mecánica para motos, lavado especializado y repuestos en Bucaramanga.">
+    <title>Taller Cor Leo - Taller de Motos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="inicio">
+
+    <!-- Encabezado y Navegación -->
+    <header class="header">
+        <img src="images/CLnegativo.png" alt="Logo de Taller Cor Leo" class="header__logo" width="100" height="auto">
+        <h1 class="header__titulo titulo-principal">COR LEO</h1>
+        <p class="header__subtitulo subtitulo">TALLER Y SERVICIO DE MOTOS</p>
+
+        <nav class="nav" aria-label="Navegación principal">
+            <ul class="nav__lista">
+                <li class="nav__item"><a href="#sobre-nosotros" class="nav__enlace">Nosotros</a></li>
+                <li class="nav__item"><a href="#servicios" class="nav__enlace">Servicios</a></li>
+                <li class="nav__item"><a href="#recomendaciones" class="nav__enlace">Recomendaciones</a></li>
+                <li class="nav__item"><a href="#horarios" class="nav__enlace">Horarios</a></li>
+                <li class="nav__item"><a href="#opiniones" class="nav__enlace">Opiniones</a></li>
+                <li class="nav__item"><a href="#ubicacion" class="nav__enlace">Ubicación</a></li>
+                <li class="nav__item"><a href="contacto.html" class="nav__enlace nav__enlace--destacado">Tarifas y
+                        Citas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <!-- Presentación con fondo de imagen -->
+        <section class="seccion seccion--nosotros" id="sobre-nosotros">
+            <div class="contenedor">
+                <h2 class="seccion__titulo">Bienvenidos a Taller Cor Leo</h2>
+                <p class="seccion__texto">
+                    Somos un taller de barrio con más de <em>20 años de experiencia</em> trabajando con motos de bajo y
+                    alto cilindraje (hasta más de 1000 cm<sup>3</sup>).
+                </p>
+                <p class="seccion__texto">
+                    Nos caracterizamos por ser <strong>honestos</strong> con nuestros clientes, usar repuestos
+                    garantizados y entregar los trabajos a tiempo.
+                </p>
+                <p class="seccion__texto">
+                    Puedes ver fotos de nuestros trabajos diarios en nuestro <a href="https://www.instagram.com"
+                        target="_blank" rel="noopener noreferrer" class="enlace-externo">Instagram oficial</a>.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3 Tarjetas de Servicios -->
+        <section class="seccion seccion--servicios" id="servicios">
+            <div class="contenedor">
+                <h2 class="seccion__titulo">Nuestros Servicios</h2>
+                <p class="seccion__descripcion">Ofrecemos tres servicios principales para el cuidado de tu motocicleta:
+                </p>
+
+                <div class="servicios__contenedor">
+                    <!-- Tarjeta 1: Mantenimiento -->
+                    <article class="tarjeta">
+                        <img src="images/mantenimiento.jpg" alt="Mecánico reparando motor de motocicleta"
+                            class="tarjeta__imagen">
+                        <div class="tarjeta__contenido">
+                            <h3 class="tarjeta__titulo">1. Mantenimiento</h3>
+                            <p class="tarjeta__descripcion">
+                                Revisión de frenos, sincronización, calibración de válvulas y alistamiento para la <abbr
+                                    title="Revisión Técnico Mecánica">RTM</abbr>.
+                            </p>
+                            <p class="tarjeta__precio">
+                                Precio: <s>$120.000</s> <strong>$95.000 COP</strong>
+                            </p>
+                            <a href="contacto.html#formulario" class="boton boton--primario">Pedir turno</a>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 2: Lavado de motos (destacada) -->
+                    <article class="tarjeta tarjeta--destacada">
+                        <img src="images/lavado.png" alt="Moto lavada con espuma y desengrasante"
+                            class="tarjeta__imagen">
+                        <div class="tarjeta__contenido">
+                            <h3 class="tarjeta__titulo">2. Lavado de Motos</h3>
+                            <p class="tarjeta__descripcion">
+                                Lavado a presión con champú especial, desengrase a fondo de la cadena y motor, y brillo
+                                de plásticos.
+                            </p>
+                            <p class="tarjeta__precio">
+                                Precio: <s>$40.000</s> <strong>$35.000 COP</strong>
+                            </p>
+                            <a href="contacto.html#formulario" class="boton boton--primario">Pedir turno</a>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 3: Venta de repuestos -->
+                    <article class="tarjeta">
+                        <img src="images/repuestos.jpg" alt="Repuestos y aceites de motos en estantería"
+                            class="tarjeta__imagen">
+                        <div class="tarjeta__contenido">
+                            <h3 class="tarjeta__titulo">3. Venta de Repuestos</h3>
+                            <p class="tarjeta__descripcion">
+                                Venta de pastillas de freno, kits de arrastre, bujías, filtros y aceites para motor de
+                                marcas reconocidas.
+                            </p>
+                            <p class="tarjeta__precio">
+                                Repuestos desde <strong>$20.000 COP</strong>
+                            </p>
+                            <a href="contacto.html#formulario" class="boton boton--primario">Consultar</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Información Útil: Listas ol y ul -->
+        <section class="seccion seccion--info" id="recomendaciones">
+            <div class="contenedor">
+                <h2 class="seccion__titulo">Información Útil</h2>
+
+                <div class="info__columnas">
+                    <div class="bloque-info">
+                        <h3 class="bloque-info__titulo">Pasos para dejar tu moto:</h3>
+                        <ol class="lista-pasos">
+                            <li class="lista-pasos__item">Llegar al taller o agendar tu cita por la página.</li>
+                            <li class="lista-pasos__item">Revisamos la moto contigo y anotamos los problemas.</li>
+                            <li class="lista-pasos__item">Te damos el presupuesto antes de desarmar nada.</li>
+                            <li class="lista-pasos__item">Probamos la moto y te la entregamos lista.</li>
+                        </ol>
+                    </div>
+
+                    <div class="bloque-info">
+                        <h3 class="bloque-info__titulo">Recomendaciones antes de viajar:</h3>
+                        <ul class="lista-tips">
+                            <li class="lista-tips__item">Calibrar el aire de las dos llantas en frío.</li>
+                            <li class="lista-tips__item">Revisar que la cadena esté templada y lubricada.</li>
+                            <li class="lista-tips__item">Mirar el nivel de aceite del motor.</li>
+                            <li class="lista-tips__item">Comprobar que todas las luces prendan bien.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabla de Horarios -->
+        <section class="seccion seccion--horarios" id="horarios">
+            <div class="contenedor">
+                <h2 class="seccion__titulo">Tabla de Horarios</h2>
+                <p class="seccion__descripcion">Atendemos de lunes a sábado en jornada continua:</p>
+
+                <div class="tabla-contenedor">
+                    <table class="tabla-horarios">
+                        <caption class="tabla-horarios__caption">Horarios de atención de Taller Cor Leo</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Día</th>
+                                <th scope="col">Mañana</th>
+                                <th scope="col">Tarde</th>
+                                <th scope="col">Servicio Rápido</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Lunes a Viernes</th>
+                                <td>8:00 AM - 12:30 PM</td>
+                                <td>2:00 PM - 6:30 PM</td>
+                                <td rowspan="2" class="tabla-horarios__express">Lavados y cambios de aceite sin cita
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Sábados</th>
+                                <td>8:00 AM - 1:00 PM</td>
+                                <td>2:00 PM - 5:00 PM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Domingos y Festivos</th>
+                                <td colspan="3" class="tabla-horarios__cerrado">Cerrado (descanso del personal)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Opiniones de Clientes -->
+        <section class="seccion seccion--opiniones" id="opiniones">
+            <div class="contenedor">
+                <h2 class="seccion__titulo">Opiniones de Clientes</h2>
+                <div class="opiniones__contenedor">
+                    <blockquote class="opinion">
+                        <p class="opinion__texto">
+                            "Excelente taller, me cuadraron los frenos y la moto quedó perfecta. Muy recomendado."
+                        </p>
+                        <cite class="opinion__autor">— Juan David Pérez</cite>
+                    </blockquote>
+
+                    <blockquote class="opinion">
+                        <p class="opinion__texto">
+                            "El lavado de motos es muy completo, le quitaron toda la grasa pegada a la cadena."
+                        </p>
+                        <cite class="opinion__autor">— Andrea Gómez</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ubicación con Iframe de Mapa -->
+        <section class="seccion seccion--ubicacion" id="ubicacion">
+            <div class="contenedor">
+                <h2 class="seccion__titulo">Cómo Llegar</h2>
+                <div class="ubicacion__caja">
+                    <address class="ubicacion__datos">
+                        <p><strong>Dirección:</strong> Carrera 27 # XX-XX, Bucaramanga</p>
+                        <p><strong>Teléfono:</strong> +57 XXX XXX XXXX</p>
+                        <p><strong>Correo:</strong> contacto@tallercorleo.com</p>
+                    </address>
+
+                    <div class="ubicacion__mapa">
+                        <iframe title="Mapa de ubicación de Taller Cor Leo en Google Maps"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.103986790518!2d-73.12356192419266!3d7.114002692889608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683fc377759a27%3A0x6d9f3f9f9b5a8e2!2sBucaramanga%2C%20Santander!5e0!3m2!1ses!2sco!4v1710000000000!5m2!1ses!2sco"
+                            width="100%" height="300" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aside: Aviso importante -->
+        <aside class="aviso">
+            <div class="contenedor">
+                <h3 class="aviso__titulo">¿Te quedaste varado?</h3>
+                <p class="aviso__texto">
+                    Si tu moto no prende en la calle, llámanos a nuestro número de emergencias: <strong>+57 XXX XXX
+                        XXXX</strong>.
+                </p>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <div class="contenedor">
+            <p class="footer__texto">&copy; 2026 Taller Cor Leo - Todos los derechos reservados.</p>
+            <p><a href="#inicio" class="footer__enlace">Subir al inicio ↑</a></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

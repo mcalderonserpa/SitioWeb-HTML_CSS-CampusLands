@@ -1,0 +1,719 @@
+/* ==========================================================================
+   TALLER COR LEO - CSS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Tipografias (@font-face)
+   -------------------------------------------------------------------------- */
+@font-face {
+    font-family: 'bodoni';
+    src: url('../fonts/titulos/BodoniModa_72pt-ExtraBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'caviar';
+    src: url('../fonts/titulos/CaviarDreams.ttf') format('truetype');
+}
+
+/* --------------------------------------------------------------------------
+   2. Variables (:root)
+   -------------------------------------------------------------------------- */
+:root {
+    /* Colores del sitio */
+    --color-fondo: #121212;
+    --color-tarjeta: #1e1e1e;
+    --color-texto: #e0e0e0;
+    --color-blanco: #ffffff;
+    --color-rojo: #d32f2f;
+    --color-rojo-oscuro: #9a0007;
+
+    /* Escala de grises sólida para las tablas */
+    --color-tabla-encabezado: #262626;
+    --color-tabla-fila-impar: #1f1f1f;
+    --color-tabla-fila-par: #161616;
+    --color-tabla-hover: #333333;
+
+    /* Colores con canal alfa (rgba) */
+    --color-alfa-negro: rgba(0, 0, 0, 0.75);
+    --color-alfa-rojo: rgba(211, 47, 47, 0.3);
+
+    /* Gradiente */
+    --gradiente-rojo: linear-gradient(to right, #d32f2f, #9a0007);
+
+    /* Tipografías con respaldo */
+    --fuente-titulos: 'bodoni', 'Georgia', serif;
+    --fuente-texto: 'caviar', 'Arial', sans-serif;
+
+    /* Medidas y modelo de caja */
+    --ancho-maximo: 1100px;
+    --radio-borde: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Estilos
+   -------------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-texto);
+    line-height: 1.5;
+    overflow-wrap: break-word;
+}
+
+/* Centrado con margin: auto */
+.contenedor {
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   4. Encabezado y barra de navegacion
+   -------------------------------------------------------------------------- */
+.header {
+    background-color: #000000;
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 1.5rem 1rem 1rem;
+    border-bottom: 3px solid var(--color-rojo);
+}
+
+.header__logo {
+    margin: 0 auto 0.5rem auto;
+}
+
+.titulo-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-family: var(--fuente-titulos);
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Líneas a los lados con ::before y ::after */
+.titulo-principal::before,
+.titulo-principal::after {
+    content: "";
+    flex: 1;
+    max-width: 60px;
+    height: 2px;
+    background-color: var(--color-blanco);
+}
+
+.subtitulo {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+/* Menú */
+.nav__lista {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+/* Conflicto de especificidad 2: Regla A (0,1,1) */
+.nav__lista a {
+    color: #bbbbbb;
+}
+
+.nav__enlace {
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radio-borde);
+    text-transform: uppercase;
+}
+
+.nav__enlace:hover {
+    background-color: #222222;
+    color: var(--color-blanco);
+}
+
+/* Conflicto de especificidad 2: Regla B (0,2,0) - Gana por tener 2 clases */
+.nav__lista .nav__enlace--destacado {
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+}
+
+.nav__lista .nav__enlace--destacado:hover {
+    background-color: var(--color-rojo-oscuro);
+}
+
+/* --------------------------------------------------------------------------
+   5. Secciones y fondo imagen
+   -------------------------------------------------------------------------- */
+.seccion {
+    padding: 2.5rem 0;
+}
+
+/* Fondo con imagen, gradiente y canal alfa */
+.seccion--nosotros {
+    background-image:
+        linear-gradient(var(--color-alfa-rojo), var(--color-alfa-negro)),
+        url('../images/taller-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.seccion__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.8rem;
+    color: var(--color-blanco);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.seccion__descripcion {
+    text-align: center;
+    color: #aaaaaa;
+    margin-bottom: 1.5rem;
+}
+
+.seccion__texto {
+    max-width: 700px;
+    margin: 0 auto 0.8rem auto;
+    font-size: 1rem;
+}
+
+.enlace-externo {
+    color: var(--color-rojo);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* --------------------------------------------------------------------------
+   6. Tarjetas de servicio
+   PC: Las 3 tarjetas al mismo nivel en una grilla de 3 columnas
+   -------------------------------------------------------------------------- */
+.servicios__contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+.tarjeta {
+    background-color: var(--color-tarjeta);
+    border-radius: var(--radio-borde);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-top: 3px solid transparent;
+}
+
+.tarjeta:hover {
+    background-color: #242424;
+}
+
+/* Tarjeta destacada */
+.tarjeta--destacada {
+    border-top: 3px solid var(--color-rojo);
+    box-shadow: 0 4px 12px var(--color-alfa-rojo);
+    animation: resaltar-tarjeta 3s infinite ease-in-out;
+}
+
+.tarjeta__imagen {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.tarjeta__contenido {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tarjeta__titulo {
+    color: var(--color-blanco);
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+}
+
+/* Conflicto de especificidad 1: Regla A (0,1,1) */
+.tarjeta p {
+    color: #bbbbbb;
+}
+
+.tarjeta__descripcion {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.tarjeta__precio {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid #333333;
+    padding-top: 0.6rem;
+}
+
+/* Conflicto de especificidad 1: Regla B (0,2,0) - Gana por 2 clases */
+.tarjeta--destacada .tarjeta__precio {
+    color: var(--color-blanco);
+}
+
+/* --------------------------------------------------------------------------
+   7. Botones
+   -------------------------------------------------------------------------- */
+.boton {
+    display: inline-block;
+    text-align: center;
+    border-radius: var(--radio-borde);
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+/* Conflicto de especificidad 3: Regla A (0,1,0) con gradiente */
+.boton--primario {
+    background: var(--gradiente-rojo);
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+    padding: 0.6rem 1.2rem;
+}
+
+.boton--primario:hover {
+    opacity: 0.9;
+}
+
+/* --------------------------------------------------------------------------
+   8. Info y Listas (::marker y combinadores)
+   -------------------------------------------------------------------------- */
+.info__columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.bloque-info {
+    background-color: var(--color-tarjeta);
+    padding: 1.5rem;
+    border-radius: var(--radio-borde);
+    border-left: 4px solid var(--color-rojo);
+}
+
+/* Combinador directo hijo (>) */
+.bloque-info>.bloque-info__titulo {
+    color: var(--color-blanco);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.lista-pasos {
+    list-style: decimal;
+    padding-left: 1.2rem;
+}
+
+.lista-pasos__item {
+    margin-bottom: 0.6rem;
+}
+
+/* Estilo del marcador ::marker */
+.lista-pasos__item::marker {
+    color: var(--color-rojo);
+    font-weight: bold;
+}
+
+.lista-tips {
+    list-style: square;
+    padding-left: 1.2rem;
+}
+
+.lista-tips__item {
+    margin-bottom: 0.6rem;
+}
+
+.lista-tips__item::marker {
+    color: #888888;
+}
+
+/* --------------------------------------------------------------------------
+   9. Tablas 
+   -------------------------------------------------------------------------- */
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: var(--radio-borde);
+    margin: 1rem 0;
+}
+
+.tabla-horarios,
+.tabla-tarifas {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.tabla-horarios__caption,
+.tabla-tarifas__caption {
+    background-color: #1a1a1a;
+    color: #888888;
+    padding: 0.6rem 1rem;
+    text-align: left;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* Encabezados con color sólido oscuro */
+.tabla-horarios thead th,
+.tabla-tarifas thead th {
+    background-color: var(--color-tabla-encabezado);
+    color: var(--color-blanco);
+    padding: 0.8rem 1rem;
+    border: none;
+    text-transform: uppercase;
+}
+
+/* Celdas sin bordes */
+.tabla-horarios th,
+.tabla-horarios td,
+.tabla-tarifas th,
+.tabla-tarifas td {
+    padding: 0.8rem 1rem;
+    border: none;
+}
+
+/* filas alternadas */
+.tabla-horarios tbody tr:nth-child(odd),
+.tabla-tarifas tbody tr:nth-child(odd) {
+    background-color: var(--color-tabla-fila-impar);
+}
+
+.tabla-horarios tbody tr:nth-child(even),
+.tabla-tarifas tbody tr:nth-child(even) {
+    background-color: var(--color-tabla-fila-par);
+}
+
+.tabla-horarios tbody tr:hover,
+.tabla-tarifas tbody tr:hover {
+    background-color: var(--color-tabla-hover);
+    color: var(--color-blanco);
+}
+
+.tabla-horarios__express {
+    background-color: #2b2b2b;
+    font-weight: bold;
+}
+
+.tabla-horarios__cerrado {
+    background-color: #171717;
+    color: #888888;
+    text-align: center;
+    font-style: italic;
+}
+
+.tabla-tarifas__nota {
+    background-color: #181818;
+    color: #999999;
+    font-size: 0.85rem;
+    padding: 0.8rem 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   10. Opiniones de clientes
+   -------------------------------------------------------------------------- */
+.opiniones__contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.opinion {
+    background-color: var(--color-tarjeta);
+    padding: 1.5rem;
+    border-radius: var(--radio-borde);
+    border-left: 3px solid #444444;
+}
+
+.opinion__texto {
+    font-style: italic;
+    color: #cccccc;
+    margin-bottom: 0.8rem;
+}
+
+.opinion__autor {
+    display: block;
+    font-style: normal;
+    font-weight: bold;
+    color: var(--color-rojo);
+    font-size: 0.85rem;
+}
+
+/* --------------------------------------------------------------------------
+   11. Ubicación y mapa
+   -------------------------------------------------------------------------- */
+.ubicacion__caja {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.ubicacion__datos {
+    background-color: var(--color-tarjeta);
+    padding: 1.5rem;
+    border-radius: var(--radio-borde);
+    font-style: normal;
+}
+
+.ubicacion__datos p {
+    margin-bottom: 0.6rem;
+}
+
+.ubicacion__mapa {
+    border-radius: var(--radio-borde);
+    overflow: hidden;
+}
+
+.ubicacion__mapa iframe {
+    display: block;
+    border: none;
+}
+
+/* --------------------------------------------------------------------------
+   12. Formulario de agendar cita 
+   -------------------------------------------------------------------------- */
+.tarjeta-formulario {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: var(--color-tarjeta);
+    padding: 1.8rem;
+    border-radius: var(--radio-borde);
+    border-top: 3px solid var(--color-rojo);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formulario__campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.formulario__label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #cccccc;
+}
+
+.formulario__input,
+.formulario__textarea,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    background-color: #141414;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    color: var(--color-blanco);
+    padding: 0.6rem 0.8rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.formulario__textarea {
+    resize: vertical;
+}
+
+.formulario__input:focus-visible,
+.formulario__textarea:focus-visible,
+input[type="text"]:focus-visible,
+input[type="tel"]:focus-visible,
+input[type="email"]:focus-visible,
+input[type="date"]:focus-visible {
+    outline: 2px solid var(--color-rojo);
+    background-color: #1a1a1a;
+}
+
+.formulario__campo:focus-within .formulario__label {
+    color: var(--color-blanco);
+}
+
+.formulario__fieldset {
+    border: 1px solid #333333;
+    border-radius: 4px;
+    padding: 0.8rem;
+}
+
+.formulario__legend {
+    color: var(--color-blanco);
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 0 0.4rem;
+}
+
+.formulario__radios {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.4rem;
+}
+
+.formulario__radio-item,
+.formulario__checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+/* Conflicto de especificidad 3: Regla B (0,1,0) - Empate resuelto por orden */
+.boton--formulario {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   13. Aside y footer
+   -------------------------------------------------------------------------- */
+.aviso {
+    background-color: #1a1a1a;
+    border-left: 5px solid var(--color-rojo);
+    padding: 1.2rem 0;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.aviso__titulo {
+    color: var(--color-blanco);
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.aviso__texto strong {
+    color: var(--color-rojo);
+}
+
+.footer {
+    background-color: #000000;
+    color: #888888;
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid #222222;
+}
+
+.footer__texto {
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+}
+
+.footer__enlace {
+    color: var(--color-rojo);
+    font-size: 0.8rem;
+}
+
+.footer__enlace:hover {
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   14. Animación 
+   -------------------------------------------------------------------------- */
+@keyframes resaltar-tarjeta {
+    0% {
+        box-shadow: 0 0 0 rgba(211, 47, 47, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 10px rgba(211, 47, 47, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 0 rgba(211, 47, 47, 0);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   15. Responsive design
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+
+    .servicios__contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .info__columnas {
+        grid-template-columns: 1fr;
+    }
+
+    .opiniones__contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .ubicacion__caja {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-principal {
+        font-size: 1.6rem;
+    }
+
+    .titulo-principal::before,
+    .titulo-principal::after {
+        max-width: 30px;
+    }
+}
+
+/* Pantallas pequeñas (celular de 360 px) */
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 0 0.8rem;
+    }
+
+    .titulo-principal {
+        font-size: 1.4rem;
+    }
+
+    .subtitulo {
+        font-size: 0.75rem;
+    }
+
+    .tarjeta__imagen {
+        height: 160px;
+    }
+
+    .tarjeta-formulario {
+        padding: 1.2rem;
+    }
+}

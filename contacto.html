@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Lista de precios de mecánica y lavado para motos en Taller Cor Leo. Formulario para agendar cita.">
+    <title>Tarifas y Citas - Taller Cor Leo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="inicio">
+
+    <!-- Encabezado y Navegación (igual a index.html) -->
+    <header class="header">
+        <img src="images/CLnegativo.png" alt="Logo de Taller Cor Leo" class="header__logo" width="100" height="auto">
+        <h1 class="header__titulo titulo-principal">COR LEO</h1>
+        <p class="header__subtitulo subtitulo">TALLER Y SERVICIO DE MOTOS</p>
+
+        <nav class="nav" aria-label="Navegación principal">
+            <ul class="nav__lista">
+                <li class="nav__item"><a href="index.html" class="nav__enlace">Inicio</a></li>
+                <li class="nav__item"><a href="index.html#servicios" class="nav__enlace">Servicios</a></li>
+                <li class="nav__item"><a href="#tarifas-mantenimiento" class="nav__enlace">Tarifas Mecánica</a></li>
+                <li class="nav__item"><a href="#tarifas-lavado" class="nav__enlace">Tarifas Lavado</a></li>
+                <li class="nav__item"><a href="#formulario" class="nav__enlace nav__enlace--destacado">Agendar Cita</a>
+                </li>
+                <li class="nav__item"><a href="index.html#ubicacion" class="nav__enlace">Ubicación</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <!-- Sección de Bienvenida a Tarifas con Fondo de Imagen -->
+        <section class="seccion seccion--nosotros">
+            <div class="contenedor">
+                <h2 class="seccion__titulo">Precios y Agendamiento</h2>
+                <p class="seccion__texto">
+                    En <strong>Taller Cor Leo</strong> manejamos precios claros sin cobros extra.
+                </p>
+                <p class="seccion__texto">
+                    Aquí puedes revisar las tablas de precios de mantenimiento y lavado según el cilindraje de tu moto
+                    (desde 100 cm<sup>3</sup> en adelante), o llenar el formulario para apartar tu turno.
+                </p>
+            </div>
+        </section>
+
+        <!-- Tabla 1: Tarifas de Mantenimiento -->
+        <section class="seccion seccion--tarifas" id="tarifas-mantenimiento">
+            <div class="contenedor">
+                <h2 class="seccion__titulo">1. Tarifas de Mantenimiento</h2>
+                <p class="seccion__descripcion">Precios de mano de obra para mecánica y calibración:</p>
+
+                <div class="tabla-contenedor">
+                    <table class="tabla-tarifas">
+                        <caption class="tabla-tarifas__caption">Tarifas de mecánica general y revisiones</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Servicio</th>
+                                <th scope="col">Cilindraje</th>
+                                <th scope="col">Tiempo</th>
+                                <th scope="col">Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" rowspan="2">Mantenimiento General</th>
+                                <td>Hasta 200 cm<sup>3</sup></td>
+                                <td>3 horas</td>
+                                <td><s>$110.000</s> <strong>$95.000 COP</strong></td>
+                            </tr>
+                            <tr>
+                                <td>250 cm<sup>3</sup> o más</td>
+                                <td>5 horas</td>
+                                <td><strong>$150.000 COP</strong></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Sincronización</th>
+                                <td>Motos a inyección</td>
+                                <td>2 horas</td>
+                                <td><strong>$70.000 COP</strong></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Cambio y purga de frenos</th>
+                                <td>Todas las motos</td>
+                                <td>1 hora</td>
+                                <td><strong>$40.000 COP</strong></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Revisión para <abbr title="Revisión Técnico Mecánica">RTM</abbr></th>
+                                <td>Revisión de luces, frenos y gases</td>
+                                <td>1 hora</td>
+                                <td><strong>$35.000 COP</strong></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="tabla-tarifas__nota">
+                                    <em>* Nota: Los repuestos y aceites se cobran por aparte según lo que escoja el
+                                        cliente.</em>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabla 2: Tarifas de Lavado -->
+        <section class="seccion seccion--tarifas" id="tarifas-lavado">
+            <div class="contenedor">
+                <h2 class="seccion__titulo">2. Tarifas de Lavado de Motos</h2>
+                <p class="seccion__descripcion">Precios de lavado y desengrase según el tamaño de la moto:</p>
+
+                <div class="tabla-contenedor">
+                    <table class="tabla-tarifas">
+                        <caption class="tabla-tarifas__caption">Paquetes de lavado y estética</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Tipo de Lavado</th>
+                                <th scope="col">Qué incluye</th>
+                                <th scope="col">Tiempo</th>
+                                <th scope="col">Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Lavado Sencillo</th>
+                                <td>Agua a presión, jabón y secado.</td>
+                                <td>30 min</td>
+                                <td><strong>$18.000 COP</strong></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Lavado con Desengrase</th>
+                                <td>Desengrase de cadena y motor + lubricación.</td>
+                                <td>45 min</td>
+                                <td><s>$30.000</s> <strong>$25.000 COP</strong></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="2">Lavado Especial Detallado</th>
+                                <td>Motos hasta 250 cm<sup>3</sup>: motor, rines, brillo y silicona de plásticos.</td>
+                                <td>1 hora</td>
+                                <td><strong>$35.000 COP</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Motos de alto cilindraje: desengrase total y cera protectora.</td>
+                                <td>1.5 horas</td>
+                                <td><strong>$45.000 COP</strong></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="tabla-tarifas__nota">
+                                    <strong>Promoción:</strong> Si haces mantenimiento general, el lavado sencillo te
+                                    queda a mitad de precio.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario para Agendar Cita -->
+        <section class="seccion seccion--formulario" id="formulario">
+            <div class="contenedor">
+                <h2 class="seccion__titulo">Formulario para Agendar Cita</h2>
+                <p class="seccion__descripcion">Llena tus datos y te confirmamos por WhatsApp el turno:</p>
+
+                <div class="tarjeta-formulario">
+                    <form action="#" method="POST" class="formulario">
+
+                        <!-- Campo 1: Nombre (type text) -->
+                        <div class="formulario__campo">
+                            <label for="nombre-cliente" class="formulario__label">Nombre completo:</label>
+                            <input type="text" id="nombre-cliente" name="nombre" class="formulario__input"
+                                placeholder="Tu nombre" required>
+                        </div>
+
+                        <!-- Campo 2: Teléfono (type tel) -->
+                        <div class="formulario__campo">
+                            <label for="telefono-cliente" class="formulario__label">Teléfono celular:</label>
+                            <input type="tel" id="telefono-cliente" name="telefono" class="formulario__input"
+                                placeholder="Ej: 3123456789" required>
+                        </div>
+
+                        <!-- Campo 3: Email (type email) -->
+                        <div class="formulario__campo">
+                            <label for="email-cliente" class="formulario__label">Correo electrónico:</label>
+                            <input type="email" id="email-cliente" name="email" class="formulario__input"
+                                placeholder="correo@ejemplo.com" required>
+                        </div>
+
+                        <!-- Campo 4: Fecha (type date) -->
+                        <div class="formulario__campo">
+                            <label for="fecha-cita" class="formulario__label">Fecha deseada:</label>
+                            <input type="date" id="fecha-cita" name="fecha" class="formulario__input" required>
+                        </div>
+
+                        <!-- Campo 5: Modelo de moto (type text) -->
+                        <div class="formulario__campo">
+                            <label for="modelo-moto" class="formulario__label">Marca y modelo de tu moto:</label>
+                            <input type="text" id="modelo-moto" name="modelo_moto" class="formulario__input"
+                                placeholder="Ej: Pulsar NS 200" required>
+                        </div>
+
+                        <!-- Selección con radios (type radio) -->
+                        <fieldset class="formulario__fieldset">
+                            <legend class="formulario__legend">¿Qué servicio necesitas?</legend>
+                            <div class="formulario__radios">
+                                <label class="formulario__radio-item">
+                                    <input type="radio" name="servicio" value="mantenimiento" checked>
+                                    Mantenimiento mecánico
+                                </label>
+                                <label class="formulario__radio-item">
+                                    <input type="radio" name="servicio" value="lavado">
+                                    Lavado de motos
+                                </label>
+                                <label class="formulario__radio-item">
+                                    <input type="radio" name="servicio" value="ambos">
+                                    Mantenimiento y lavado
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <!-- Mensaje / Textarea -->
+                        <div class="formulario__campo">
+                            <label for="detalles-moto" class="formulario__label">¿Qué fallas o ruidos tiene la
+                                moto?</label>
+                            <textarea id="detalles-moto" name="detalles" class="formulario__textarea" rows="4"
+                                placeholder="Escribe aquí si la moto se apaga, le suenan los frenos, etc."
+                                required></textarea>
+                        </div>
+
+                        <!-- Checkbox términos (type checkbox) -->
+                        <div class="formulario__campo formulario__campo--checkbox">
+                            <label class="formulario__checkbox-item">
+                                <input type="checkbox" name="acepta_terminos" id="acepta-terminos" required>
+                                Acepto que me contacten para confirmar la cita.
+                            </label>
+                        </div>
+
+                        <!-- Botón de envío -->
+                        <button type="submit" class="boton boton--primario boton--formulario">Agendar Cita</button>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aside: Aviso -->
+        <aside class="aviso">
+            <div class="contenedor">
+                <h3 class="aviso__titulo">¿Prefieres escribirnos directo?</h3>
+                <p class="aviso__texto">
+                    Si te urge el servicio, también puedes escribirnos al WhatsApp: <strong>+57 XXX XXX XXXX</strong>.
+                </p>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- Pie de Página (igual a index.html) -->
+    <footer class="footer">
+        <div class="contenedor">
+            <p class="footer__texto">&copy; 2026 Taller Cor Leo - Todos los derechos reservados.</p>
+            <p><a href="#inicio" class="footer__enlace">Subir al inicio ↑</a></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
