@@ -206,5 +206,7 @@ El sitio está adaptado para verse bien desde computadores hasta celulares de **
 
 ## 10. Capturas
 
+### Pagina principal - PC
 ![captura pc](capturas/PC.png)
+### Pagina principal - Movil
 ![captura movil](capturas/movil.png)
